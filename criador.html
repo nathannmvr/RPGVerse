@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPGverse - Criar Personagem</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=MedievalSharp&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+    <!-- Barra Lateral -->
+    <nav class="sidebar">
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="RPGverse Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="rpg-mesa.html"><i class="fas fa-dice-d20"></i>RPGs de Mesa</a></li>
+            <li><a href="rpg-eletronicos.html"><i class="fas fa-gamepad"></i>RPGs Eletrônicos</a></li>
+            <li><a href="criador.html" class="active"><i class="fas fa-user-plus"></i>Criar Personagem</a></li>
+            <li><a href="lore.html"><i class="fas fa-scroll"></i>Lore & Mundos</a></li>
+            <li><a href="gerador-nomes.html"><i class="fas fa-magic"></i>Gerador de Nomes</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <main class="content">
+        <h1>Criador de Personagens</h1>
+        
+        <!-- Formulário -->
+        <section class="criador-form">
+            <div class="form-container">
+                <div class="form-column">
+                    <h2><i class="fas fa-pencil-alt"></i> Detalhes</h2>
+                    <div class="form-group">
+                        <label for="nome">Nome do Personagem:</label>
+                        <input type="text" id="nome" placeholder="Ex: Aragorn">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="raca">Raça:</label>
+                        <select id="raca">
+                            <option value="humano">Humano</option>
+                            <option value="elfo">Elfo</option>
+                            <option value="anao">Anão</option>
+                            <option value="orc">Orc</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="classe">Classe:</label>
+                        <select id="classe">
+                            <option value="guerreiro">Guerreiro</option>
+                            <option value="mago">Mago</option>
+                            <option value="ladino">Ladino</option>
+                            <option value="clerigo">Clérigo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-column">
+                    <h2><i class="fas fa-chart-bar"></i> Atributos</h2>
+                    <div class="atributos">
+                        <div class="atributo">
+                            <label>Força: <span id="forca-valor">10</span></label>
+                            <input type="range" id="forca" min="1" max="20" value="10">
+                        </div>
+                        <div class="atributo">
+                            <label>Destreza: <span id="destreza-valor">10</span></label>
+                            <input type="range" id="destreza" min="1" max="20" value="10">
+                        </div>
+                        <div class="atributo">
+                            <label>Inteligência: <span id="inteligencia-valor">10</span></label>
+                            <input type="range" id="inteligencia" min="1" max="20" value="10">
+                        </div>
+                        <div class="atributo">
+                            <label>Constituição: <span id="constituicao-valor">10</span></label>
+                            <input type="range" id="constituicao" min="1" max="20" value="10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visualização -->
+            <div class="visualizacao">
+                <h2><i class="fas fa-eye"></i> Visualização</h2>
+                <div class="personagem-card">
+                    <div class="personagem-info">
+                        <h3 id="visualizar-nome">Nome do Personagem</h3>
+                        <p><strong>Raça:</strong> <span id="visualizar-raca">Humano</span></p>
+                        <p><strong>Classe:</strong> <span id="visualizar-classe">Guerreiro</span></p>
+                        <p><strong>Atributos:</strong></p>
+                        <ul id="visualizar-atributos">
+                            <li>Força: 10</li>
+                            <li>Destreza: 10</li>
+                            <li>Inteligência: 10</li>
+                            <li>Constituição: 10</li>
+                        </ul>
+                    </div>
+                </div>
+                <button id="salvar-personagem"><i class="fas fa-save"></i> Salvar Ficha</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/criador.js"></script>
+</body>
+</html>
