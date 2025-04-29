@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +9,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
-    <!-- Barra Lateral -->
     <nav class="sidebar">
         <div class="logo">
             <img src="assets/img/logo.png" alt="RPGverse Logo">
@@ -26,12 +23,8 @@
             <li><a href="gerador-nomes.html"><i class="fas fa-magic"></i>Gerador de Nomes</a></li>
         </ul>
     </nav>
-
-    <!-- Conteúdo Principal -->
     <main class="content">
         <h1>Lore & Mundos</h1>
-
-        <!-- Abas de Universos -->
         <div class="abas-container">
             <div class="abas-navegacao">
                 <button class="aba-btn active" data-aba="thedas">Thedas (Dragon Age)</button>
@@ -39,8 +32,6 @@
                 <button class="aba-btn" data-aba="eberron">Eberron (D&D)</button>
                 <button class="aba-btn" data-aba="azeroth">Azeroth (WoW)</button>
             </div>
-
-            <!-- Conteúdo das Abas -->
             <div class="aba-conteudo active" id="thedas">
                 <div class="lore-card">
                     <h2><i class="fas fa-dragon"></i> Thedas</h2>
@@ -62,8 +53,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Dentro da seção de abas, após o conteúdo de Thedas -->
             <div class="aba-conteudo" id="tamriel">
                 <div class="lore-card">
                     <h2><i class="fas fa-mountain"></i> Tamriel (The Elder Scrolls)</h2>
@@ -90,7 +79,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="aba-conteudo" id="eberron">
                 <div class="lore-card">
                     <h2><i class="fas fa-bolt"></i> Eberron (Dungeons & Dragons)</h2>
@@ -116,7 +104,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="aba-conteudo" id="azeroth">
                 <div class="lore-card">
                     <h2><i class="fas fa-globe"></i> Azeroth (World of Warcraft)</h2>
@@ -145,8 +132,6 @@
             </div>
         </div>
     </main>
-
     <script src="assets/js/lore.js"></script>
 </body>
-
 </html>

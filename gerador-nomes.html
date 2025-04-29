@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Barra Lateral -->
     <nav class="sidebar">
         <div class="logo">
             <img src="assets/img/logo.png" alt="RPGverse Logo">
@@ -23,11 +22,8 @@
             <li><a href="gerador-nomes.html" class="active"><i class="fas fa-magic"></i>Gerador de Nomes</a></li>
         </ul>
     </nav>
-
-    <!-- Conteúdo Principal -->
     <main class="content">
         <h1>Gerador de Nomes Épicos</h1>
-        
         <div class="gerador-container">
             <div class="controles">
                 <div class="form-group">
@@ -39,7 +35,6 @@
                         <option value="orc">Orc</option>
                     </select>
                 </div>
-                
                 <div class="form-group">
                     <label>Gênero:</label>
                     <div class="gender-buttons">
@@ -47,12 +42,10 @@
                         <button class="gender-btn" data-gender="feminino">Feminino</button>
                     </div>
                 </div>
-                
                 <button id="gerar-nome-btn" class="btn-gerar">
                     <i class="fas fa-wand-sparkles"></i> Gerar Nome
                 </button>
             </div>
-
             <div class="resultado-container">
                 <div id="nome-gerado">Aragorn</div>
                 <button id="copiar-nome" class="btn-copiar">
@@ -61,7 +54,6 @@
             </div>
         </div>
     </main>
-
     <script src="assets/js/gerador-nomes.js"></script>
 </body>
 </html>

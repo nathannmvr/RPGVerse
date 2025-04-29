@@ -18,10 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Variável para armazenar o último nome gerado
     let ultimoNomeGerado = '';
     
-    // Elementos
     const genderButtons = document.querySelectorAll('.gender-btn');
     const racaSelect = document.getElementById('raca-select');
     const nomeGerado = document.getElementById('nome-gerado');
@@ -30,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let generoSelecionado = 'masculino';
 
-    // Event Listeners
     genderButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             genderButtons.forEach(b => b.classList.remove('active'));
@@ -42,16 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
     btnGerar.addEventListener('click', gerarNome);
     btnCopiar.addEventListener('click', copiarNome);
 
-    // Função principal
     function gerarNome() {
         const raca = racaSelect.value;
         const listaNomes = nomes[raca][generoSelecionado];
         
-        // Garante que há nomes suficientes para evitar repetição
         if (listaNomes.length > 1) {
             let novoNome;
             let tentativas = 0;
-            const maxTentativas = 20; // Evita loop infinito
+            const maxTentativas = 20; 
             
             do {
                 novoNome = listaNomes[Math.floor(Math.random() * listaNomes.length)];
@@ -60,13 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             ultimoNomeGerado = novoNome;
         } else {
-            ultimoNomeGerado = listaNomes[0]; // Única opção disponível
+            ultimoNomeGerado = listaNomes[0];
         }
 
         exibirNomeComEfeito(ultimoNomeGerado);
     }
 
-    // Efeito visual
     function exibirNomeComEfeito(nome) {
         nomeGerado.style.opacity = '0';
         setTimeout(() => {
@@ -75,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 300);
     }
 
-    // Copiar nome
     function copiarNome() {
         navigator.clipboard.writeText(nomeGerado.textContent)
             .then(() => {
@@ -87,6 +80,5 @@ document.addEventListener('DOMContentLoaded', () => {
             .catch(err => console.error('Erro ao copiar:', err));
     }
 
-    // Gerar primeiro nome ao carregar
     gerarNome();
 });
